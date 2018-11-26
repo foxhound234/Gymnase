@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.FenFXML_Accueil">
+   <children>
+      <Accordion layoutX="109.0" layoutY="22.0" />
+      <MenuBar prefHeight="56.0" prefWidth="603.0">
+        <menus>
+          <Menu mnemonicParsing="false" text="statistique">
+            <items>
+              <MenuItem mnemonicParsing="false" text="Ajouter" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="sport">
+            <items>
+              <MenuItem mnemonicParsing="false" onAction="#handleAjouteSport" text="ajouter" />
+                  <MenuItem mnemonicParsing="false" text="ajouterSalle" />
+            </items>
+          </Menu>
+          <Menu mnemonicParsing="false" text="Association">
+            <items>
+                  <MenuItem mnemonicParsing="false" text="modifier" />
+              <MenuItem mnemonicParsing="false" text="ajouter" />
+                  <MenuItem mnemonicParsing="false" text="reserver" />
+                  <MenuItem mnemonicParsing="false" text="pratiquer" />
+            </items>
+          </Menu>
+        </menus>
+      </MenuBar>
+   </children>
+</AnchorPane>

@@ -1,0 +1,16 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import java.lang.*?>
+<?import java.util.*?>
+<?import javafx.scene.*?>
+<?import javafx.scene.control.*?>
+<?import javafx.scene.layout.*?>
+
+<AnchorPane id="AnchorPane" prefHeight="400.0" prefWidth="600.0" xmlns="http://javafx.com/javafx/8" xmlns:fx="http://javafx.com/fxml/1" fx:controller="controlleur.FenFXML_AjoutSport">
+   <children>
+      <TextField id="txtSport" fx:id="txtSport" layoutX="121.0" layoutY="181.0" prefHeight="34.0" prefWidth="298.0" />
+      <Label layoutX="196.0" layoutY="109.0" prefHeight="34.0" prefWidth="154.0" text="Nom du Sport" />
+      <Button id="btnOk" fx:id="btnOk" layoutX="99.0" layoutY="286.0" mnemonicParsing="false" onAction="#handleOk" prefHeight="48.0" prefWidth="171.0" text="Ajouter" />
+      <Button layoutX="290.0" layoutY="281.0" mnemonicParsing="false" onAction="#handleAnnul" prefHeight="58.0" prefWidth="121.0" text="Annuler" />
+   </children>
+</AnchorPane>
