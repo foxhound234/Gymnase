@@ -13,9 +13,8 @@ import javafx.fxml.FXMLLoader;
 import javafx.fxml.Initializable;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
-
+        
 /**
  * FXML Controller class
  *
@@ -25,43 +24,41 @@ public class FenFXML_Accueil implements Initializable {
 
   
    
-   
-    private  Gymnase gymnase;
+       Stage secondaryStage;
     /**
      * Initializes the controller class.
      */
-    @Override
+
+    /**
+     * Initializes the controller class.
+     * @param url
+     */
+
+    /**
+     * Initializes the controller class.
+     * @param url
+     * @param rb
+     */
+       @Override
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
    @FXML
    private void handleAjouteSport() throws IOException
    {
-      boolean okclick=AjoutSport();
-   }
-   public boolean AjoutSport()
- {
-    try
-    {
-     FXMLLoader loader=new
-            FXMLLoader(Gymnase.class.getResource("/vue/FenFXML_AjoutSport.fxml"));
-     AnchorPane page=(AnchorPane) loader.load();
-     Stage dialogStage=new Stage();
-     dialogStage.setTitle("Ajout sport");
-     dialogStage.initModality(Modality.WINDOW_MODAL);
-     //dialogStage.initOwner(primaryStage);
-     Scene scene=new Scene(page);
-     dialogStage.setScene(scene);
-     FenFXML_AjoutSportController controleur=loader.getController();
-     controleur.setDialogStage(dialogStage);
-     //controleur.setGymnase(this);
-     dialogStage.showAndWait();
-     return  controleur.isOkclick();
-    }
-    catch(IOException ioe)
-    {
-        System.out.println("Erreur chargement boite dialogue"+ioe.getMessage());
-        return false;
-    }
- }
+        try
+        {
+            secondaryStage = new Stage();
+            secondaryStage.setTitle("Confirmation de l'inscription à la session de formation");
+            FXMLLoader loader = new FXMLLoader(Mainapp.class.getResource("/vue/FenFXML_AjoutSport.fxml"));
+            AnchorPane rootLayout = (AnchorPane) loader.load();
+            Scene scene = new Scene(rootLayout);
+            secondaryStage.setScene(scene);
+            secondaryStage.show();
+        }
+        catch (IOException e)
+        {
+            System.out.println("Erreur chargement seconde fenetre : " + e.getMessage());
+        }
+}
 }

@@ -12,14 +12,13 @@ import javafx.application.Application;
 import javafx.fxml.FXMLLoader;
 import javafx.scene.Scene;
 import javafx.scene.layout.AnchorPane;
-import javafx.stage.Modality;
 import javafx.stage.Stage;
 
 /**
  *
  * @author Rabelais
  */
-public class Gymnase extends Application {
+public class Mainapp extends Application {
 
     private Stage primaryStage;
     private AnchorPane rootLayout;
@@ -32,7 +31,7 @@ public class Gymnase extends Application {
         try
         {
            FXMLLoader loader=new
-                FXMLLoader(Gymnase.class.getResource("/vue/FenFXML_Accueil.fxml"));
+                FXMLLoader(Mainapp.class.getResource("/vue/FenFXML_Accueil.fxml"));
                 rootLayout=(AnchorPane) loader.load();
                 Scene scene=new Scene(rootLayout);
                 primaryStage.setScene(scene);

@@ -20,7 +20,6 @@ import modele.Sport;
  * @author Rabelais
  */
 public class FenFXML_AjoutSportController implements Initializable {
-    private Gymnase gymnase;
     private Stage dialogstage;
     @FXML
     private TextField txtSport;
@@ -37,12 +36,7 @@ public class FenFXML_AjoutSportController implements Initializable {
     public void initialize(URL url, ResourceBundle rb) {
         // TODO
     }    
-    
-    public void setGymnase(Gymnase gymnase)
-    {
-        this.gymnase=gymnase;
-    }
-   
+
     public void setDialogStage(Stage dialogStage)
     {
         this.dialogstage=dialogStage;
